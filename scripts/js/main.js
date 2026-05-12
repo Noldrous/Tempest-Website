@@ -92,11 +92,11 @@ function getPositions() {
 }
 
 const people = [
-  { name: "Adrian Marquez",   role: "UI/UX Dev",  lang: "Figma",   avatar: "../assets/img/Marquez.png" },
-  { name: "Wency Jae Villegas",     role: "Game Developer/Front End",   lang: "Python, Java, JavaScript", avatar: "../assets/img/Villegas.png" },
-  { name: "Josh Arrieta",   role: "Game Dev/Front End",    lang: "Python, Java, JavaScript", avatar: "../assets/img/Arrieta.png" },
-  { name: "Aldred Naranjo",     role: "UI/UX Dev",        lang: "Figma",  avatar: "../assets/img/Naranjo.png" },
-  { name: "Flint Yabes",     role: "UI/UX Dev",     lang: "Figma",   avatar: "../assets/img/Yabes.png" },
+  { name: "Adrian Marquez",   role: "UI/UX Dev",  lang: "Figma",   avatar: "assets/img/Marquez.png" },
+  { name: "Wency Jae Villegas",     role: "Game Developer/Front End",   lang: "Python, Java, JavaScript", avatar: "assets/img/Villegas.png" },
+  { name: "Josh Arrieta",   role: "Game Dev/Front End",    lang: "Python, Java, JavaScript", avatar: "assets/img/Arrieta.png" },
+  { name: "Aldred Naranjo",     role: "UI/UX Dev",        lang: "Figma",  avatar: "assets/img/Naranjo.png" },
+  { name: "Flint Yabes",     role: "UI/UX Dev",     lang: "Figma",   avatar: "assets/img/Yabes.png" },
 ];
 
 const purpleShades = [
