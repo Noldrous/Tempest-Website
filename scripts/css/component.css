@@ -1,0 +1,88 @@
+.developers{
+    background: url('/assets/img/background-asset.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: sans-serif;
+    flex-direction: column;
+}
+.carousel-scene {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0 30px;
+  }
+  .carousel-track {
+    position: relative;
+    width: min(1100px, 90vw);
+    height: clamp(320px, 40vw, 500px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card {
+    position: absolute;
+    width: clamp(180px, 18vw, 300px);
+    height: clamp(280px, 32vw, 470px);
+    border-radius: 14px;
+    box-shadow: 0 0 15px 5px #00e5ff6c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(14px, 1.2vw, 20px);
+    font-weight: 500;
+    color: #EAF2FF;
+    text-shadow: 3px 3px 5px #000000;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    user-select: none;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .carousel-buttons {
+    margin-top: 30px;
+    top: 60%;
+    transform: translateY(-50%);
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+  }
+  .btn {
+    padding: 10px 28px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 0.5px;
+    transition: opacity 0.15s, transform 0.1s;
+  }
+  .btn:active { transform: scale(0.97); }
+  .btn-prev {
+    background: #6c3bffa5;
+    color: white;
+    font-weight: bold; 
+    border-radius: 5px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+    font-family: 'Futuristic';
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 0px #fff, 2px 2px 0px #888;
+  }
+
+  .btn-next {background: #00E5FF;
+    color: #0A0A0A; 
+    font-weight: bold; 
+    border-radius: 5px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+    font-family: 'Futuristic';
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 0px #fff, 2px 2px 0px #888;
+  }
+
+  .btn-prev:hover {background-color: #7C4DFF;}
+  .btn-next:hover{
+    background-color: #47e4f6;
+    box-shadow: 0 0 15px 5px rgba(0, 212, 255, 0.7);
+  }
