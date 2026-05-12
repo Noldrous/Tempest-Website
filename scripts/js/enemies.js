@@ -1,37 +1,37 @@
 // For screenshots
 const screenshotData = [
     { 
-        img: "/assets/img/seeker.gif", 
+        img: "assets/img/seeker.gif", 
         title: "Seeker", 
         desc: "A fast, aggressive unit that continuously homes in on the player, applying constant pressure with sharp turns and steady acceleration." 
     },
     { 
-        img: "/assets/img/elite_seeker.gif", 
+        img: "assets/img/elite_seeker.gif", 
         title: "Elite Seeker", 
         desc: "A tougher and faster variant of the Seeker, trading turning speed for stronger pursuit and higher survivability." 
     },
     { 
-        img: "/assets/img/shooter.gif", 
+        img: "assets/img/shooter.gif", 
         title: "Blaster", 
         desc: "A tactical unit that repositions across the battlefield, then stops to fire controlled shots while strafing around the player." 
     },
     {
-        img: "/assets/img/elite_shooter.gif", 
+        img: "assets/img/elite_shooter.gif", 
         title: "Elite Blaster", 
         desc: "An advanced shooter that fires rapid alternating shots from dual sides, creating harder-to-dodge bullet patterns." 
     },
     {
-        img: "/assets/img/teleporter.gif", 
+        img: "assets/img/teleporter.gif", 
         title: "Warper", 
         desc: "A disruptive enemy that blinks across the arena and unleashes radial bursts of bullets, forcing constant repositioning." 
     },
     {
-        img: "/assets/img/charger.gif", 
+        img: "assets/img/charger.gif", 
         title: "Charger",
         desc: "A massive boss that locks onto the player, charges at high speed, and punishes mistakes with powerful collisions and bullet bursts." 
     },
     {
-        img: "/assets/img/mothership.gif",
+        img: "assets/img/mothership.gif",
         title: "Mothership", 
         desc: "A stationary boss that dominates the battlefield with rotating bullet patterns and overwhelming projectile waves over time." 
     },

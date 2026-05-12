@@ -136,7 +136,7 @@ HERO SECTION
   justify-content: center;
   align-items: center;
   height: 90vh;
-  background: url('/assets/img/background-asset.png');
+  background: url('assets/img/background-asset.png');
 }
 
 #logo{
