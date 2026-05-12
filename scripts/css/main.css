@@ -136,7 +136,7 @@ HERO SECTION
   justify-content: center;
   align-items: center;
   height: 90vh;
-  background: url('assets/img/background-asset.png');
+  background: url('../../assets/img/background-asset.png');
 }
 
 #logo{
@@ -385,7 +385,10 @@ KEY FEATURES TAB
 
 .features-container {
     padding: 100px 10%;
-    background: var(--bg-dark);
+    background-color: #000000ad;
+    background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+                  linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 35px 35px;
     overflow-x: hidden;
 }
 
