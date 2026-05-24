@@ -11,7 +11,6 @@ body {
     height: 100vh;
     overflow-x: hidden;
     max-width: 100%;
-    /* Page transition styles */
     opacity: 1;
     transform: translateY(20px);
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
@@ -34,22 +33,22 @@ NAVBAR
 */
 .navbar {
   display: flex; 
-  justify-content: space-between; /* Pushes logo to left, links to right */
+  justify-content: space-between;
   align-items: center;
-  padding: 0px 5%; /* Adds breathing room on the sides */
+  padding: 0px 5%;
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(50px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  height: 80px; /* Fixed height for consistency */
+  height: 80px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-  position: sticky; /* Keeps it at the top while scrolling */
+  position: sticky;
   top: 0;
   z-index: 9999;
 }
 
 .nav-links {
   display: inline-flex;
-  gap: 40px; /* Standard spacing between links */
+  gap: 40px;
 }
 
 .nav-link {
@@ -64,14 +63,10 @@ NAVBAR
   position: relative;
 }
 
-/* Hover Effect Fix */
 .nav-link:hover{
   color: #fff;
   text-shadow: 0 0 15px #00f2ff, 0 0 25px #00f2ff;
-  /* Instead of changing font-size (which moves other elements), 
-     use scale for a smoother futuristic pop */
   transform: scale(1.1); 
-
 }
 
 @keyframes pulse-glow {
@@ -86,7 +81,7 @@ NAVBAR
 }
 
 .nav-avatar img {
-  width: 140px; /* Slightly reduced to fit standard bars */
+  width: 140px;
   height: auto;
   border-radius: 10%;
   border-top-right-radius: 60%;
@@ -100,9 +95,31 @@ NAVBAR
   filter: brightness(1.2);
 }
 
+/* Hamburger Menu (hidden by default) */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 10000;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: #00f2ff;
+  transition: 0.3s ease;
+  box-shadow: 0 0 6px rgba(0, 242, 255, 0.6);
+}
+
+.nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
 .play-button{
   position:relative;
-
   margin-top: 50px;
   margin-bottom: 50px;
   max-width: 300px;
@@ -136,7 +153,7 @@ HERO SECTION
   justify-content: center;
   align-items: center;
   height: 90vh;
-  background: url('../../assets/img/background-asset.png');
+  background: url('/assets/img/background-asset.png');
 }
 
 #logo{
@@ -151,7 +168,6 @@ HERO SECTION
   pointer-events: none;
   filter: drop-shadow(5px 5px 10px rgba(225, 255, 0, 0.264));
   transform: translateX(0);
-  transform: scale(0.80);
   position: absolute;
 }
 
@@ -170,7 +186,6 @@ ABOUT SECTION
   background: radial-gradient(circle at center, #1a1035 0%, #05070f 100%);
 }
 
-/* Container for the 3-column layout */
 .about-container {
     display: flex;
     align-items: center;
@@ -181,14 +196,13 @@ ABOUT SECTION
     margin-top: 50px;
 }
 
-/* LEFT COLUMN: Large Stacked Text */
 .about-keywords {
     flex: 1;
     display: flex;
     flex-direction: column;
     text-align: right;
     font-family: 'Futuristic', sans-serif;
-    font-size: 45px; /* Adjust based on your preference */
+    font-size: 45px;
     line-height: 1.1;
     color: #fff;
     letter-spacing: 2px;
@@ -199,7 +213,6 @@ ABOUT SECTION
     text-shadow: 0 0 20px rgba(0, 242, 255, 0.6);
 }
 
-/* MIDDLE COLUMN: The GIF Frame */
 .about-gif {
     flex: 2; 
     display: flex;
@@ -228,7 +241,6 @@ ABOUT SECTION
     height: auto;
 }
 
-/* RIGHT COLUMN: Description Text */
 .about-description {
     flex: 1;
     text-align: left;
@@ -242,7 +254,7 @@ ABOUT SECTION
     background: transparent;
     border: none;
     padding: 0;
-    width: auto; /* Resetting your previous 900px width */
+    width: auto;
     max-width: 400px;
 }
 
@@ -254,7 +266,6 @@ ABOUT SECTION
   display: flex;
   border-bottom: 1px solid;
 }
-
 
 #info-icon{
   display: flex;
@@ -278,7 +289,6 @@ ENEMY SECTION
   align-items: center;
   flex-direction: column;
   padding: 60px 0;
-
   background-color: #1a1035ad;
   background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
                   linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
@@ -309,7 +319,7 @@ ENEMY SECTION
     margin-bottom: 60px;
     font-family: 'Futuristic', sans-serif;
     color: #fff;
-    min-height: 80px; /* Prevents layout jump when text changes */
+    min-height: 80px;
     text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
 }
 
@@ -336,7 +346,6 @@ ENEMY SECTION
     justify-content: center;
 }
 
-/* Screenshot Card Style */
 .ss-card {
     position: absolute;
     width: 400px; 
@@ -385,10 +394,7 @@ KEY FEATURES TAB
 
 .features-container {
     padding: 100px 10%;
-    background-color: #000000ad;
-    background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-                  linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-    background-size: 35px 35px;
+    background: var(--bg-dark);
     overflow-x: hidden;
 }
 
@@ -418,25 +424,20 @@ KEY FEATURES TAB
     justify-content: space-between;
     margin-bottom: 200px;
     gap: 80px;
-    
-    /* Initial state for reveal */
     opacity: 0;
     transform: translateY(50px);
     transition: all 1s cubic-bezier(0.2, 0.6, 0.3, 1);
 }
 
-/* Reveal class triggered by JS */
 .feature-card.active-scroll {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Alternate items */
 .feature-card:nth-child(even) {
     flex-direction: row-reverse;
 }
 
-/* Default: Image on Right, Content on Left -> Align Text Right */
 .feature-content {
     flex: 1;
     font-family: 'Futuristic', sans-serif;
@@ -444,7 +445,6 @@ KEY FEATURES TAB
     text-align: right;
 }
 
-/* Alternate: Image on Left, Content on Right -> Align Text Left */
 .feature-card:nth-child(even) .feature-content {
     text-align: left;
 }
@@ -606,4 +606,372 @@ FOOTER
 .footer-contact .bar {
     margin: 0 10px;
     color: #333;
+}
+
+
+/* ==============================================
+   RESPONSIVE BREAKPOINTS
+   ==============================================
+   Tablet:  ≤ 1024px
+   Mobile:  ≤ 768px
+   Small:   ≤ 480px
+   ============================================== */
+
+/* -----------------------------------------------
+   TABLET  (≤ 1024px)
+----------------------------------------------- */
+@media (max-width: 1024px) {
+
+  /* Navbar */
+  .nav-links {
+    gap: 20px;
+  }
+
+  .nav-avatar img {
+    width: 110px;
+  }
+
+  /* About */
+  .about-container {
+    gap: 30px;
+  }
+
+  .about-keywords {
+    font-size: 34px;
+  }
+
+  /* Features */
+  .features-container {
+    padding: 80px 6%;
+  }
+
+  .main-title h1 {
+    font-size: 3rem;
+  }
+
+  .feature-card {
+    gap: 50px;
+    margin-bottom: 140px;
+  }
+
+  .feature-content h2 {
+    font-size: 2rem;
+  }
+
+  /* Developers carousel */
+  .carousel-buttons {
+    width: 70%;
+  }
+}
+
+
+/* -----------------------------------------------
+   MOBILE  (≤ 768px)
+----------------------------------------------- */
+@media (max-width: 768px) {
+
+  /* ---- Navbar ---- */
+  .navbar {
+    padding: 0 4%;
+    height: 65px;
+    position: relative; /* allow dropdown to flow below */
+  }
+
+  
+
+  .nav-hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 242, 255, 0.2);
+    padding: 10px 0;
+    z-index: 9998;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-link {
+    padding: 14px 8%;
+    font-size: 12px;
+    letter-spacing: 2px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .nav-link.active {
+    animation: none;
+    transform: none;
+  }   
+
+  .nav-avatar img {
+    width: 90px;
+  }
+
+  /* ---- Hero ---- */
+  .parallax {
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+  }
+
+  #logo {
+    transform: scale(0.55);
+    margin-bottom: 30%;
+  }
+
+  #ship {
+    transform: scale(0.55);
+    margin-top: 260px;
+  }
+
+  /* ---- About ---- */
+  .parallax2 {
+    height: auto;
+    padding: 50px 5%;
+  }
+
+  .about-container {
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .about-keywords {
+    font-size: 28px;
+    text-align: center;
+    order: 1;
+  }
+
+  .about-gif {
+    order: 2;
+    width: 100%;
+  }
+
+  .gif-frame img {
+    max-width: 100%;
+  }
+
+  .about-description {
+    order: 3;
+    text-align: center;
+  }
+
+  .about-description p {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  #info-icon {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 5%;
+  }
+
+  /* ---- Enemy / Screenshots Carousel ---- */
+  .parallax3 {
+    padding: 40px 0;
+  }
+
+  .carousel-container {
+    height: 400px;
+  }
+
+  .ss-card {
+    width: 260px;
+    height: 300px;
+  }
+
+  .carousel-caption p {
+    font-size: 12px;
+    padding: 0 15px;
+  }
+
+  #ss-prev { left: 2%; }
+  #ss-next { right: 2%; }
+
+  .nav-btn {
+    padding: 14px 10px;
+    font-size: 16px;
+  }
+
+  /* ---- Key Features ---- */
+  .features-container {
+    padding: 60px 5%;
+  }
+
+  .main-title {
+    margin-bottom: 60px;
+  }
+
+  .main-title h1 {
+    font-size: 2rem;
+    letter-spacing: 3px;
+  }
+
+  .feature-card {
+    flex-direction: column !important; /* override even/odd rule */
+    gap: 30px;
+    margin-bottom: 80px;
+  }
+
+  .feature-content {
+    text-align: center !important; /* override even/odd rule */
+  }
+
+  .feature-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .feature-content p {
+    font-size: 1rem;
+  }
+
+  /* ---- Developers Carousel ---- */
+  .developers {
+    padding: 20px 0;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .carousel-track {
+    height: clamp(280px, 60vw, 400px);
+  }
+
+  .card {
+    width: clamp(140px, 40vw, 220px);
+    height: clamp(220px, 55vw, 350px);
+    font-size: clamp(12px, 3vw, 16px);
+  }
+
+  .carousel-buttons {
+    width: 85%;
+  }
+
+  .btn {
+    padding: 10px 18px;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  /* ---- Footer ---- */
+  .game-footer {
+    padding: 40px 5% 30px 5%;
+  }
+
+  .footer-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .footer-nav a {
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+  .separator {
+    display: none; /* hide separators when wrapping */
+  }
+
+  .footer-info p {
+    font-size: 11px;
+  }
+
+  .footer-contact {
+    font-size: 10px;
+  }
+}
+
+
+/* -----------------------------------------------
+   SMALL PHONES  (≤ 480px)
+----------------------------------------------- */
+@media (max-width: 480px) {
+
+  /* Hero */
+  .parallax {
+    height: 60vh;
+  }
+
+  #logo {
+    transform: scale(0.42);
+    margin-bottom: 40%;
+  }
+
+  #ship {
+    transform: scale(0.45);
+    margin-top: 200px;
+  }
+
+  /* Play button */
+  .play-button {
+    padding: 18px 16px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    max-width: 90%;
+    margin: 30px auto;
+  }
+
+  /* About */
+  .about-keywords {
+    font-size: 22px;
+  }
+
+  /* Screenshots */
+  .carousel-container {
+    height: 320px;
+  }
+
+  .ss-card {
+    width: 200px;
+    height: 240px;
+  }
+
+  /* Features */
+  .main-title h1 {
+    font-size: 1.6rem;
+  }
+
+  .feature-content h2 {
+    font-size: 1.3rem;
+  }
+
+  /* Developer cards */
+  .card {
+    width: clamp(120px, 48vw, 180px);
+    height: clamp(190px, 64vw, 280px);
+  }
+
+  .carousel-buttons {
+    width: 95%;
+  }
+
+  .btn {
+    padding: 8px 14px;
+    font-size: 11px;
+  }
+
+  /* Devs section */
+  .devs {
+    padding-top: 20px;
+  }
+
+  .devs h2 {
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 0 10px;
+  }
 }
