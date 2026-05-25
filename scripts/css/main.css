@@ -150,6 +150,7 @@ HERO SECTION
 .parallax{
   position: relative;
   display: flex;
+  overflow: hidden;
   justify-content: center;
   align-items: center;
   height: 90vh;
@@ -676,8 +677,6 @@ FOOTER
     height: 65px;
     position: relative; /* allow dropdown to flow below */
   }
-
-  
 
   .nav-hamburger {
     display: flex;

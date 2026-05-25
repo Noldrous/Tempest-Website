@@ -15,7 +15,11 @@ window.addEventListener('scroll', () => {
     let value = window.scrollY;
 
     if (logo) logo.style.marginTop = value * -1.5 + 'px';
-    if (ship) ship.style.transform = `translateX(${value * 1.5}px) scale(0.80)`;
+        if (ship) {
+      const maxSlide = window.innerWidth * 1.5;
+      const slide = Math.min(value * 1.5, maxSlide);
+      ship.style.transform = `translateX(${slide}px) scale(0.80)`;
+    }
 });
 
 // Page transition handlers
