@@ -183,7 +183,7 @@ ABOUT SECTION
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 75vh;
+  height: auto;
   background: radial-gradient(circle at center, #1a1035 0%, #05070f 100%);
 }
 
@@ -256,7 +256,7 @@ ABOUT SECTION
     border: none;
     padding: 0;
     width: auto;
-    max-width: 400px;
+    max-width: 100%;
 }
 
 .aboutBox h2{
